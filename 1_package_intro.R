@@ -1,6 +1,7 @@
 ###############################################
 ## Introduction to R
-## First coding session
+## These are the materials for the first coding session
+## Introduction to R packages
 ## Spencer Fox
 ## March 31, 2016
 ###############################################
@@ -43,8 +44,7 @@ qmap("University of Texas at Austin", zoom=15)
 
 ## First store the location for PCL in a new variable, then plot the UT map with PCL indicated
 pcl_location = geocode("101 E 21st St, Austin, TX 78712", source = "google")
-ggmap(get_map("University of Texas at Austin", zoom = 15)) +
-  geom_point(data=pcl_location, size = 7, shape = 13, color = "red")
+ggmap(get_map("University of Texas at Austin", zoom = 15)) + geom_point(data=pcl_location, size = 7, shape = 13, color = "red")
 
 
 ###############################################
@@ -54,8 +54,7 @@ ggmap(get_map("University of Texas at Austin", zoom = 15)) +
 your_address = geocode("808 W 29th st, Austin, TX 78705", source = "google")
 
 ## Now plot it on a map of austin
-ggmap(get_map("Austin", zoom = 12)) +
-  geom_point(data=your_address, size = 7, shape = 13, color = "red")
+ggmap(get_map("Austin", zoom = 12)) + geom_point(data=your_address, size = 7, shape = 13, color = "red")
 
 # Now copy the code above and try changing the function arguments. 
 # Change the zoom number, what happens with smaller numbers?
