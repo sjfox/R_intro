@@ -69,7 +69,7 @@ comet <- readOBJ(url("http://sci.esa.int/science-e/www/object/doc.cfm?fobjectid=
 ## colors the object gray.
 shade3d(comet, col="gray")
 
-## Try moving the comet around. Also try changing the color of the comet 
+## Try moving the comet around by clicking and dragging. Also try changing the color of the comet 
 ## (hint, you need to rerun all 3 lines again with different color)
 
 
@@ -82,7 +82,8 @@ shade3d(comet, col="gray")
 library(ggmap)
 
 ## Plot a map of texas -- Notice it searches an online database for maps matching "texas"
-## Remember the commas separate arguments of the function. Try changing the zoom number
+## Remember the commas separate arguments of the function. Try changing the zoom number or location
+## qmap stands for quick map
 qmap("texas", zoom=6, color="bw")
 
 ## Plot a map of UT now, and now don't make it black and white
@@ -100,7 +101,7 @@ ggmap(get_map("University of Texas at Austin", zoom = 15)) + geom_point(data=pcl
 
 ## Try changing the size, shape, color in the geom_point() function
 ## See if you can understand what they are changing about the plot
-
+## See here for how the shapes map to numbers: http://www.cookbook-r.com/Graphs/Shapes_and_line_types/
 
 ###############################################
 ## First exercise!!!
